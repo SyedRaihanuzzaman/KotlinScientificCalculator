@@ -11,10 +11,68 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding:ActivityMainBinding
     private var canAddOperation = false
     private var canAddDecimal = true
+    private var prevResult = 0.0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.sinButton.setOnClickListener {
+            val operand = binding.workingsTV.text.toString()
+            val result = Math.sin(Math.toRadians(operand.toDouble()))
+            binding.workingsTV.text = result.toString()
+        }
+
+        binding.cosButton.setOnClickListener {
+            val operand = binding.workingsTV.text.toString()
+            val result = Math.cos(Math.toRadians(operand.toDouble()))
+            binding.workingsTV.text = result.toString()
+        }
+
+        binding.tanButton.setOnClickListener {
+            val operand = binding.workingsTV.text.toString()
+            val result = Math.tan(Math.toRadians(operand.toDouble()))
+            binding.workingsTV.text = result.toString()
+        }
+
+        binding.logButton.setOnClickListener {
+            val operand = binding.workingsTV.text.toString()
+            val result = Math.log10(operand.toDouble())
+            binding.workingsTV.text = result.toString()
+        }
+
+        binding.inButton.setOnClickListener {
+            val operand = binding.workingsTV.text.toString()
+            val result = Math.log(operand.toDouble())
+            binding.workingsTV.text = result.toString()
+        }
+
+        binding.factorialButton.setOnClickListener {
+            val operand = binding.workingsTV.text.toString()
+            var result = 1.0
+            for (i in 2..operand.toInt()) {
+                result *= i.toDouble()
+            }
+            binding.workingsTV.text = result.toString()
+        }
+
+        binding.squareButton.setOnClickListener {
+            val operand = binding.workingsTV.text.toString()
+            val result = operand.toDouble() * operand.toDouble()
+            binding.workingsTV.text = result.toString()
+        }
+
+        binding.rootButton.setOnClickListener {
+            val operand = binding.workingsTV.text.toString()
+            val result = Math.sqrt(operand.toDouble())
+            binding.workingsTV.text = result.toString()
+        }
+
+        binding.reciprocalButton.setOnClickListener {
+            val operand = binding.workingsTV.text.toString()
+            val result = 1.0 / operand.toDouble()
+            binding.workingsTV.text = result.toString()
+        }
     }
     fun numberAction(view: View){
         if(view is Button)

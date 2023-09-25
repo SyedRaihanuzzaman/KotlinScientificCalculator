@@ -75,21 +75,26 @@
         style="@style/buttonRow">
 
         <Button
+            android:id="@+id/sinButton"
             style="@style/buttonOperator"
 
             android:text="sin"/>
         <Button
+            android:id="@+id/cosButton"
             style="@style/buttonOperator"
             android:text="cos"/>
         <Button
+            android:id="@+id/tanButton"
             style="@style/buttonOperator"
             android:text="tan"
             />
         <Button
+            android:id="@+id/logButton"
             style="@style/buttonOperator"
             android:text="log"
             />
         <Button
+            android:id="@+id/inButton"
             style="@style/buttonOperator"
             android:text="in"
             />
@@ -101,17 +106,21 @@
         style="@style/buttonRow">
 
         <Button
+            android:id="@+id/factorialButton"
             style="@style/buttonOperator"
 
             android:text="x!"/>
         <Button
+            android:id="@+id/squareButton"
             style="@style/buttonOperator"
             android:text="x²"/>
         <Button
+            android:id="@+id/rootButton"
             style="@style/buttonOperator"
             android:text="√"
             />
         <Button
+            android:id="@+id/reciprocalButton"
             style="@style/buttonOperator"
             android:text="1/x"
             />
